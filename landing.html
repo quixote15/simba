@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>INSPINIA - Landing Page</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Animation CSS -->
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body id="page-top" class="landing-page no-skin-config">
+<div class="navbar-wrapper">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand"  style="width: 85px; background-color: rgb(0, 188, 235);"> Simba </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="page-scroll" href="#page-top">Home</a></li>
+                        <li><a class="page-scroll" href="#team">Desenvolvedores</a></li>
+                        <li><a class="page-scroll" href="#testimonials">Testimonials</a></li>
+                        <li><a class="page-scroll" href="#pricing">Preços</a></li>
+                        <li><a class="page-scroll" href="#contact">Contatos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+</div>
+
+
+
+<section id="testimonials" class="navy-section testimonials" style="margin-top: 0;background-color: rgb(0, 188, 235);">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center wow zoomIn">
+                <i class="fa fa-comment big-icon"></i>
+               
+                <div class="testimonials-text">
+                    <i>As pessoas não sabem o que querem, até mostrarmos a elas.</i>
+                </div>
+                <small>
+                    <strong> Steve Jobs </strong>
+                </small>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<section id="contact" class="gray-section contact">
+    <div class="container">
+        <div class="row m-b-lg">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1>Fale com a Simba</h1>
+                <p>Porque ninguém é faliz com formulários</p>
+            </div>
+        </div>
+      
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <a style="background-color: rgb(0, 188, 235);" href="mailto:test@email.com" class="btn btn-primary">Enviar Email</a>
+                <p class="m-t-sm">
+                    Ou pelas redes sociais
+                </p>
+                <ul class="list-inline social-icon">
+                    <li ><a style="background-color: rgb(0, 188, 235);" href="#"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li><a style="background-color: rgb(0, 188, 235);" href="https://www.facebook.com/Simba-a-inteligência-artificial-da-Universidade-Federal-de-Sergipe-522359728187123"><i class="fa fa-facebook"></i></a>
+                    </li>
+                    <li><a style="background-color: rgb(0, 188, 235);" href="#"><i class="fa fa-linkedin"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
+                <p><strong>&copy; Hackathon Smart Ufs 2018</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mainly scripts -->
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+<script src="js/plugins/wow/wow.min.js"></script>
+
+
+<script>
+
+    $(document).ready(function () {
+
+        $('body').scrollspy({
+            target: '.navbar-fixed-top',
+            offset: 80
+        });
+
+        // Page scrolling feature
+        $('a.page-scroll').bind('click', function(event) {
+            var link = $(this);
+            $('html, body').stop().animate({
+                scrollTop: $(link.attr('href')).offset().top - 50
+            }, 500);
+            event.preventDefault();
+            $("#navbar").collapse('hide');
+        });
+    });
+
+    var cbpAnimatedHeader = (function() {
+        var docElem = document.documentElement,
+                header = document.querySelector( '.navbar-default' ),
+                didScroll = false,
+                changeHeaderOn = 200;
+        function init() {
+            window.addEventListener( 'scroll', function( event ) {
+                if( !didScroll ) {
+                    didScroll = true;
+                    setTimeout( scrollPage, 250 );
+                }
+            }, false );
+        }
+        function scrollPage() {
+            var sy = scrollY();
+            if ( sy >= changeHeaderOn ) {
+                $(header).addClass('navbar-scroll')
+            }
+            else {
+                $(header).removeClass('navbar-scroll')
+            }
+            didScroll = false;
+        }
+        function scrollY() {
+            return window.pageYOffset || docElem.scrollTop;
+        }
+        init();
+
+    })();
+
+    // Activate WOW.js plugin for animation on scrol
+    new WOW().init();
+
+</script>
+<script src="https://widget.flowxo.com/embed.js" data-fxo-widget="eyJ0aGVtZSI6IiMwMGJjZWIiLCJ3ZWIiOnsiYm90SWQiOiI1YjlkMTg0YmQ1ZDg2NTAwN2IzMmUwNGIiLCJ0aGVtZSI6IiMwMGJjZWIiLCJsYWJlbCI6IlNtYXJ0IFVGUyJ9LCJ3ZWxjb21lVGV4dCI6IvCfmIEifQ==" async defer></script>
+</body>
+</html>
